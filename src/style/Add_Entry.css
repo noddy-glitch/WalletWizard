@@ -1,0 +1,134 @@
+/* 🌟 Main Form Container */
+.tracker-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 40px auto;
+  margin-top: 110px;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease;
+  box-sizing: border-box;
+}
+
+/* Title */
+.tracker-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+/* Sub-title (optional) */
+.sub-text {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 18px;
+}
+
+/* 🌟 Form Layout */
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Labels */
+.expense-form label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs / Select Fields */
+.expense-form input,
+.expense-form select {
+  width: 100%;
+  padding: 13px 15px;
+  border-radius: 12px;
+  border: 1.6px solid #d7d7d7;
+  background: #fafafa;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s ease-in-out;
+}
+
+/* Focus effect */
+.expense-form input:focus,
+.expense-form select:focus {
+  border-color: #6a5acd;
+  box-shadow: 0 0 6px rgba(106, 90, 205, 0.3);
+  background: #fff;
+}
+
+/* Optional text */
+.optional {
+  font-size: 0.8rem;
+  color: #777;
+  margin-left: 5px;
+}
+
+/* 🌟 Submit Button */
+.expense-form button {
+  padding: 14px;
+  background: linear-gradient(135deg, #6a5acd, #836fff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.expense-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 90, 205, 0.4);
+}
+
+/* 🌟 Make all inputs same width */
+.expense-form input,
+.expense-form select {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+
+/* 🌟 Mobile Responsive */
+@media (max-width: 480px) {
+  .tracker-container {
+    margin: 20px;
+    padding: 22px;
+  }
+
+  .tracker-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .expense-form {
+    gap: 16px;
+  }
+
+  .expense-form input,
+  .expense-form select {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
+
+/* 🌟 Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
